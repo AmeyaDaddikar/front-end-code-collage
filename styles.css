@@ -1,0 +1,496 @@
+/* 
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+//////////// BASE COMPONENT STYLES ////////////////////
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+/
+*/
+
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Comfortaa', cursive;
+}
+
+.heading {
+  font-family: 'Lobster', cursive;
+}
+html, body {
+  overflow-x: hidden;
+  font-size: 28px;
+}
+
+p, a, li {
+  font-size: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type="text"], input[type="password"] {
+  padding: 0.3rem;
+  border-radius: 0.2rem;
+}
+
+button {
+  padding: 0.4rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  outline:none;
+  background-color: white;
+}
+
+body.dark button{
+  background-color: rgb(15, 15, 15);
+  color: white !important;
+  border: none;
+}
+
+button:hover, button:active {
+  /* Hover effect for light theme*/
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.25);
+  box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.25);
+}
+
+
+
+/* 
+////////////TEXT COLORS////////////////////////
+*/
+.text-white {
+  color:white;
+}
+
+.text-black {
+  color:#212121;
+}
+
+ .text-dark-accent {
+  color: #3D6EB6;
+}
+ .text-dark-shade {
+  color: #888784;
+}
+ .text-light-main {
+  color: rgb(253, 214, 84);
+}
+ .text-light-accent {
+  color: #CFD3DF;
+}
+ .text-light {
+  color: rgb(212, 209, 201);
+}
+
+/* */
+body.dark .text-dark-accent {
+  color: #66BAAE;
+}
+body.dark .text-dark-shade {
+  color: #595856;
+}
+body.dark .text-light-main {
+  color: rgb(139, 182, 179);
+}
+body.dark .text-light-accent {
+  color: #969696;
+}
+body.dark .text-light {
+  color: #F5F2EC;
+}
+
+a, a:active, a:visited {
+  color: #595856;
+}
+
+body.dark a, body.dark a:active, body.dark a:visited {
+  color: #F5F2EC;
+}
+/* 
+////////////BACKGROUND COLORS////////////////////////
+*/
+ .bg-dark-accent {
+  background-color: #3D6EB6;
+}
+ .bg-dark-shade {
+  background-color: #888784;
+}
+ .bg-light-main {
+  background-color: #FEE081;
+}
+ .bg-light-accent {
+  background-color: #CFD3DF;
+}
+ .bg-light {
+  background-color: rgb(212, 209, 201);;
+}
+
+body.dark .bg-dark-accent {
+  background-color: #66BAAE;
+}
+body.dark .bg-dark-shade {
+  background-color: #595856;
+}
+body.dark .bg-light-main {
+  background-color: #C0E0DE;
+}
+body.dark .bg-light-accent {
+  background-color: #969696;
+}
+body.dark .bg-light {
+  background-color: #F5F2EC;
+}
+
+
+/* 
+//////////// CONTAINER DIVS ////////////////////////
+*/
+.container {
+  display: block;
+  margin: 1.5vh auto;
+}
+
+.container-fluid {
+  display: inline-block;
+  margin: 1vw auto;
+}
+
+/* 
+////////////MISCELLANEOUS ////////////
+*/
+.text-center {
+  text-align: center;
+}
+
+/* 
+////////////THEME TOGGLE ANIMATION ////////////
+*/
+@keyframes fadeInDark {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeInLight {
+	0% {
+    opacity: 0;
+	}
+	100% {
+    opacity: 1;
+	}
+}
+
+@keyframes fadeInLightx {
+	0% {
+    opacity: 0;
+    z-index: -1;
+	}
+	100% {
+    opacity: 1;
+    z-index: 4;
+	}
+}
+
+
+body.dark {
+  background-color: #212121;
+  color: #F5F2EC;
+}
+
+body * {
+  opacity: 1;
+  animation-name: fadeInLight;
+	animation-timing-function: ease-out;
+	animation-duration: 0.25s;
+
+}
+body.dark * {
+  opacity: 1;
+  animation-name: fadeInDark;
+	animation-timing-function: ease-in;
+	animation-duration: 0.25s;
+
+}
+
+/* 
+//////////// TESTING COMPONENTS ////////////////////////
+*/
+
+.test-box-1 {
+  width: 250px;
+  height: 250px;
+}
+
+.test-box-2 {
+  width: 100vw;
+  padding-top: 5vh;
+}
+
+/* 
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+//////////// CUSTOM COMPONENTS ////////////////////////
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+NOTE:
+If an component needs an alternative dark mode appearance,
+use `body.dark elem` selector to specify dark theme behavior
+/
+*/
+
+/* 
+HEADER
+*/
+header {
+  padding: 4vh 0;
+}
+
+#heading-contact{
+  float: right;
+  margin-right: 2vw;
+  text-align: right;
+  padding-left: 4rem;
+}
+
+#heading-contact  + h1.heading {
+  padding-left: 7rem;
+}
+
+@media only screen and (max-width: 800px) {
+  #heading-contact {
+    width: 100vw;
+  }
+
+  #heading-contact + h1.heading {
+    padding-left: 0;
+  }
+}
+
+/* 
+NAVIGATION
+*/
+nav {
+  width: 90vw;
+  margin: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  width: 45%;
+  float: left;
+}
+nav .loginDiv {
+  width: 50%;
+  float: right;
+}
+
+nav .loginDiv * {
+  float: right;
+  margin: 0 0.4rem;
+}
+
+nav ul li {
+  float: left;
+  padding:0 0.2rem;
+}
+
+@media only screen and (max-width: 700px) {
+  nav ul {
+    width: 100%;
+    margin: 0 auto;
+    float: none;
+  }
+
+  nav .loginDiv {
+    width: 100%;
+    margin: 0 auto;
+    float: none;
+  }
+}
+
+/* 
+MODALS
+*/
+.modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 4;
+  background-color: rgba(0,0,0,0.50);
+  width: 100vw;
+  height: 100vh;
+  animation-name: none !important;
+  opacity: 0;
+  z-index: -1;
+}
+
+body.dark .modal {
+  opacity: 0;
+  z-index: -1;
+  background-color: rgba(15,15,15,0.60);
+  animation-name: none !important;
+}
+
+.modal-body {
+  display: block;
+  margin: 30vh auto;
+  width: 500px;
+  min-height: 100px;
+  border-radius: 0.3rem;
+  background-color: #CFD3DF;
+  color: black !important;
+  padding: 1rem;
+}
+
+body.dark .modal-body {
+  background-color: #595856;
+  color: white !important;
+
+}
+.modal-closeBtn {
+  margin: 0.8rem auto 0;
+  min-width: 170px;
+  display: block;
+}
+
+body.dark .modal.show, .modal.show {
+  animation-name: fadeInLightx;
+  animation-timing-function: ease-out;
+  opacity: 1;
+  z-index: 4;
+}
+
+/*
+Main Container
+*/
+#main {
+  width:100vw; 
+  margin-top: 15vh;
+  height: 65vh;
+}
+
+#main section, #main aside.sidenav-left {
+  float:left;
+}
+
+@media only screen and (max-width:800px) {
+  #main {
+    margin-top: 35vh;
+  }
+} 
+
+/*
+Left side Nav
+*/
+aside.sidenav-left {
+  margin-left: 3vw;
+  width: 300px;
+  height: 100%;
+}
+
+aside.sidenav-left ul {
+  list-style-type: none;
+}
+
+aside.sidenav-left ul li {
+  text-align: center;
+  margin: 10px;
+}
+aside.sidenav-left ul li button {
+  width: 80%;
+}
+body.dark aside.sidenav-left ul li button {
+  background-color: #888784;
+}
+
+.demoDiv {
+  width: 40vw;
+  min-height: 100%;
+  background-color: #ececec;
+  border-radius: 0.3rem;
+  overflow-y: scroll;
+}
+
+.notif-right{
+  margin: 1vh 0;
+  width: 18vw;
+  height: 100%;
+  background-color: #F5F2EC;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  float: right;
+}
+
+body.dark .notif-right {
+  color: #817f7f;
+}
+.notif-right ul {
+  margin: 5vh 1vw;
+}
+.notif-right ul li{
+  margin: 0.4rem;
+  list-style-type: square;
+  font-size: 0.6rem;
+}
+
+@media only screen and (max-width:980px) {
+  aside.sidenav-left {
+    width: 100% !important;
+    margin: 4vh auto;
+    color: red !important;
+    height: auto;
+  }
+
+  .demoDiv {
+    width: 100%;
+    margin: 1vh auto;
+    border-radius: 0;
+  }
+  .notif-right {
+    width: 100%;
+    margin: 4vh auto;
+  }
+}
+
+/*
+  SUB APPLICATIONS
+*/
+.sub-app {
+  color: black !important;
+  display: none;
+  width: 100%;
+  margin: 0.5rem;
+}
+
+body.dark .sub-app {
+  display: none;
+}
+
+.mypic {
+  width: 40%;
+  border-radius: 0.5rem;
+}
+
+/* 
+COLOR SLIDER
+*/
+
+#colorResult {
+  background-color: red;
+  display: block;
+  width: 90vw;
+  height: 90vw;
+  max-width: 200px;
+  max-height:200px;
+  margin:auto;
+}
+.slider {
+  display: block;
+  margin:auto;
+  margin-top: 5vh;
+}

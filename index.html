@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta author = "Ameya S. Daddikar" />
+
+    <title>My Web Technologies Snippets</title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Lobster" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css">
+
+  </head>
+  <body>
+
+    <header>
+      <div id="heading-contact">
+          <a href="mailto:ameyadaddikar@gmail.com" title="ameyadaddikar@gmail.com">Email</a> &nbsp;
+          <a href="https://github.com/AmeyaDaddikar" target="_blank">Github Repo</a>
+      </div>
+      <h1 class="text-center heading text-dark-accent">Code Collage</h1>
+    </header>
+    <nav class="conainer">
+      <ul>
+        <li><button app="default">Home</button></li>
+        <li><button app="about-me">About</button></li>
+        <li><button id="themeBtn">Toggle Theme</button></li>
+      </ul>
+
+      <form class="loginDiv">
+        <button class="modal-toggle" target="loginMsg">Login</button>
+        <input type="password" placeholder="Password" />
+        <input type="text" placeholder="Username" />
+      </form>
+    </nav>
+    <div class="container" id="main">
+      <aside class="container sidenav-left">
+        <ul id="sideNav">
+          <li><button app="color-picker">Color Picker</button></li>
+          <li><button app="num-converter">Todo: Number Converter</button></li>
+          <li><button app="feedback-form">Todo: Feeback Form</button></li>
+          <li><button app="about-me">About Me</button></li>
+        </ul>
+      </aside>
+      
+      <section class="container demoDiv">
+        <section class="sub-app" id="color-picker">
+            <div id="colorResult"></div>
+            <br/>
+            <h5 class="text-center" id="color-value">Color</h5>
+            <input class="slider" min=0 max=255 step=1 value=0 type="range" />
+            <input class="slider" min=0 max=255 step=1 value=0 type="range" />
+            <input class="slider" min=0 max=255 step=1 value=0 type="range" />
+                
+        </section>
+        <section class="sub-app" id="num-converter">
+          <h1>TODO:Number Converter</h1>
+        </section>
+        <section class="sub-app" id="feedback-form">
+          <h1>TODO:Feedback Form</h1>
+        </section>
+        <section class="sub-app" id="about-me">
+          <h1 class="text-center heading text-dark-accen">About Me</h1>
+          <br />
+          <div class="container LI-profile-badge"  style="max-width:300px; margin:auto;" data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="ameyadaddikar"><a class="LI-simple-link" href='https://in.linkedin.com/in/ameyadaddikar?trk=profile-badge'>Ameya Daddikar</a></div>
+          <a><button class="container bg-light" style="color:black !important">My Github &nbsp;&nbsp;<img width="12px" height="auto" src="/images/GitHub-Mark-64px.png" alt="Github Logo" /></button></a>
+
+          <!-- <img class="container mypic" src="/images/mypic.jpeg" alt="My Photo"> -->
+          <!-- <h4 class="heading text-light-main text-center">Ameya Daddikar</h4> -->
+          <br />
+        </section>
+        <section class="sub-app" id="default" style="display:block;">
+          <h5 style="position: relative;
+          top: 50%;
+          transform: translateY(400%); font-size: 16px;" class="text-center text-dark-shade">Choose one of the sub-apps<br/> mentioned in the navigation</h5>
+        </section>
+      </section>
+      <aside class="container notif-right">
+        <h3 class="text-center heading text-light-main">Notifications</h3>
+        <ul>
+          <li>Responsive Design <small>(Minor tweaks remaining)</small></li>
+          <li>Dark & Light Theme Toggle</li>
+          <li>Modal & Custom Alert Popup <small>(Click on Login)</small></li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer>
+      <p style="text-align: right;margin: 60px 20px 10px 20px;">
+        <a href="https://opensource.org/licenses/ISC">ISC License</a>
+      </p>
+    </footer>
+
+
+    <div class="modal" id="loginMsg">
+      <div class="modal-body">
+          <h4 class="heading">Please Note</h4>
+          <hr />
+          <p style="width: 98%; margin-top: 0.5rem;" class="container modal-message">This page is a static design page only, no server-side logic has been provided</p>
+          <button class="modal-closeBtn" target="loginMsg">Close</button>
+      </div>
+    </div>
+
+
+    <script src="/index.js"></script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+  </body>
+</html>
