@@ -2,6 +2,7 @@
 A collage of miscellaneous front end codes &amp; snippets compiled together in a single webpage.
 Just an extension to an otherwise dull assignment given to me in Web Technologies Lecture.
 
+You can see that the base layout is based on the pic provided in te repo.
 
 ### Todo
 1. Breaking of code into components
